@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NavBar.master.cs" Inherits="ER_System_Synergy.NavBar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--Bootstrap CSS--%>
+    <link href="Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
+    <%--Jquery--%>
+    <script src="Bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
+    <%--Popper JS--%>
+    <script src="Bootstrap/JS/popper.min.js"></script>
+    <%--Bootstrap JS--%>
+    <script src="Bootstrap/JS/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark text-uppercase font-weight-light" style="background-color: #28313B">
+                <img src="Images/Logo_of_MAS_Holdings.png" width="80" height="30" />
+                <%--&nbsp;&nbsp;--%>
+                <%--<a class="navbar-brand" href="#">VOP system</a>--%>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    area-expanded="false" area-label="Toggle navigation" href="HomePage.aspx">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="AbsentSummary.aspx">Absent-Summary</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="CarderSummary.aspx">Carder-Summary</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="CarderSummary.aspx">ETO-Summary</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="ManPower.aspx">Man-Power</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="EmployeeProfile.aspx">Employee-Profile</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="ExcelUpload.aspx">Excel-Upload</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="DataEntering.aspx">Data-Entering</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="LoginPage.aspx">Log-Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--Main Content Placeholder-->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--Main Content Placeholder-->
+    </form>
+</body>
+</html>
