@@ -71,16 +71,32 @@
     <Content Include="Bootstrap\JS\bootstrap.min.js" />
     <Content Include="Bootstrap\JS\jquery-3.2.1.slim.min.js" />
     <Content Include="Bootstrap\JS\popper.min.js" />
+    <Content Include="FeedbackPage.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\hi.gif" />
     <Content Include="Images\lock.jpeg" />
     <Content Include="Images\lock1.png" />
     <Content Include="Images\Logo_of_MAS.png" />
     <Content Include="Images\Logo_of_MAS_Holdings.png" />
+    <Content Include="Images\y1.png" />
+    <Content Include="Images\y2.png" />
+    <Content Include="Images\y3.jpeg" />
+    <Content Include="Images\y4.jpeg" />
+    <Content Include="Images\y5.jpeg" />
+    <Content Include="Images\y6.png" />
+    <Content Include="Images\y7.jpeg" />
+    <Content Include="Images\y8.jpeg" />
     <Content Include="LoginPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FeedbackPage.aspx.cs">
+      <DependentUpon>FeedbackPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedbackPage.aspx.designer.cs">
+      <DependentUpon>FeedbackPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
