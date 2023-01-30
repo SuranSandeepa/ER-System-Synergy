@@ -16,23 +16,23 @@ namespace ER_System_Synergy
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "Admin" || txtUsername.Text == "admin" && txtPassword.Text == "12345")
+            if (txtUsername.Text.ToLower() == "admin" && txtPassword.Text == "12345")
             {
-                Session["un"] = txtUsername.Text;
+                Session["un"] = "Admin";
                 Session["pw"] = txtPassword.Text;
 
                 Response.Redirect("HomePage.aspx");
             }
-            else if (txtUsername.Text == "ER" || txtUsername.Text == "er" && txtPassword.Text == "123")
+            else if (txtUsername.Text.ToLower() == "er" && txtPassword.Text == "123")
             {
-                Session["un"] = txtUsername.Text;
+                Session["un"] = "ER";
                 Session["pw"] = txtPassword.Text;
 
                 Response.Redirect("HomePage.aspx");
             }
-            else if (txtUsername.Text == "HOD" || txtUsername.Text == "hod" && txtPassword.Text == "12")
+            else if (txtUsername.Text.ToLower() == "hod" && txtPassword.Text == "12")
             {
-                Session["un"] = txtUsername.Text;
+                Session["un"] = "HOD";
                 Session["pw"] = txtPassword.Text;
 
                 Response.Redirect("HomePage.aspx");

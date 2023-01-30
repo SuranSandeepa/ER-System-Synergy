@@ -9,20 +9,21 @@ namespace ER_System_Synergy
 {
     public partial class FeedbackPage : System.Web.UI.Page
     {
-        string un;        
+        //string un;        
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            un = (string)Session["un"];
+            //un = (string)Session["un"];
+            string un = (Session["un"] != null) ? (string)Session["un"] : "";
 
-            if (un == "admin" || un == "Admin")
+            if (un == "Admin")
             {
-                btnFview.Enabled = true;
+                btnFview.Visible = true;
             }
             else
             {
-                btnFview.Enabled = false;
+                btnFview.Visible = false;
             }
         }
     }
