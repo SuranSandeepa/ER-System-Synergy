@@ -72,6 +72,7 @@
     <Content Include="Bootstrap\JS\jquery-3.2.1.slim.min.js" />
     <Content Include="Bootstrap\JS\popper.min.js" />
     <Content Include="FeedbackPage.aspx" />
+    <Content Include="FeedbackViewPage.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\hi.gif" />
     <Content Include="Images\lock.jpeg" />
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="FeedbackPage.aspx.designer.cs">
       <DependentUpon>FeedbackPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackViewPage.aspx.cs">
+      <DependentUpon>FeedbackViewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedbackViewPage.aspx.designer.cs">
+      <DependentUpon>FeedbackViewPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
@@ -130,6 +138,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Login\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
