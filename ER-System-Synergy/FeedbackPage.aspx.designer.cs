@@ -24,13 +24,13 @@ namespace ER_System_Synergy
         protected global::System.Web.UI.WebControls.TextBox txtREPF;
 
         /// <summary>
-        /// TextBox1 control.
+        /// txtQ1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtQ1;
 
         /// <summary>
         /// rbExcellent control.
@@ -69,13 +69,13 @@ namespace ER_System_Synergy
         protected global::System.Web.UI.WebControls.RadioButton rbPoor;
 
         /// <summary>
-        /// TextBox2 control.
+        /// txtReason control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtReason;
 
         /// <summary>
         /// btnRSave control.

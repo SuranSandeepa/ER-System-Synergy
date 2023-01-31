@@ -89,7 +89,7 @@
                         <div class="form-row">
                             <div class="col-lg-7">
                                 <span>q1 :</span>
-                                <asp:TextBox ID="TextBox1" class="form-control my-1 p-1" placeholder="Type Here..." runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtQ1" class="form-control my-1 p-1" placeholder="Type Here..." runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
@@ -104,14 +104,14 @@
                         <div class="form-row">
                             <div class="col-lg-7">
                                 <span>Reason :</span>
-                                <asp:TextBox ID="TextBox2" class="form-control my-1 p-1" placeholder="Type Here..." runat="server" TextMode="MultiLine"></asp:TextBox>
+                                <asp:TextBox ID="txtReason" class="form-control my-1 p-1" placeholder="Type Here..." runat="server" TextMode="MultiLine"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <asp:Button ID="btnRSave" class="Rsave mt-3 mb-5" runat="server" Text="Save" />
-                                <asp:Button ID="btnCancel" class="Rsave mt-3 mb-5" runat="server" Text="Cancel" />
-                                <asp:Button ID="btnFview" class="Rsave mt-3 mb-5" runat="server" Text="View" />
+                                <asp:Button ID="btnRSave" class="Rsave mt-3 mb-5" runat="server" Text="Save" OnClick="btnRSave_Click" />
+                                <asp:Button ID="btnCancel" class="Rsave mt-3 mb-5" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+                                <asp:Button ID="btnFview" class="Rsave mt-3 mb-5" runat="server" Text="View" OnClick="btnFview_Click" />
                             </div>
                         </div>
                     </form>
