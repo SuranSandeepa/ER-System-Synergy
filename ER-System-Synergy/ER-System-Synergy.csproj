@@ -71,6 +71,8 @@
     <Content Include="Bootstrap\JS\bootstrap.min.js" />
     <Content Include="Bootstrap\JS\jquery-3.2.1.slim.min.js" />
     <Content Include="Bootstrap\JS\popper.min.js" />
+    <Content Include="Database1ViewPage.aspx" />
+    <Content Include="ExcelUploadPage.aspx" />
     <Content Include="FeedbackPage.aspx" />
     <Content Include="FeedbackViewPage.aspx" />
     <Content Include="HomePage.aspx" />
@@ -91,7 +93,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database1ViewPage.aspx.cs">
+      <DependentUpon>Database1ViewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database1ViewPage.aspx.designer.cs">
+      <DependentUpon>Database1ViewPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="ExcelUploadPage.aspx.cs">
+      <DependentUpon>ExcelUploadPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExcelUploadPage.aspx.designer.cs">
+      <DependentUpon>ExcelUploadPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FeedbackPage.aspx.cs">
       <DependentUpon>FeedbackPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,7 +156,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Login\" />
+    <Folder Include="ExcelUpload\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
