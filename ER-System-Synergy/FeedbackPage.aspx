@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
+    <link href="CSS/Main.css" rel="stylesheet" />
+
     <style>
         span {
             color: black;
