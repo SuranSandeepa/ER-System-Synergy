@@ -6,25 +6,27 @@
 <head runat="server">
     <title></title>
     <%--Bootstrap CSS--%>
-    <link href="Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
+    <%--<link href="Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />--%>
     <%--Jquery--%>
-    <script src="Bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
+    <%--<script src="Bootstrap/JS/jquery-3.2.1.slim.min.js"></script>--%>
     <%--Popper JS--%>
-    <script src="Bootstrap/JS/popper.min.js"></script>
+    <%--<script src="Bootstrap/JS/popper.min.js"></script>--%>
     <%--Bootstrap JS--%>
-    <script src="Bootstrap/JS/bootstrap.min.js"></script>
+    <%--<script src="Bootstrap/JS/bootstrap.min.js"></script>--%>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <%--        <div>
             <nav class="navbar navbar-expand-lg navbar-dark text-uppercase font-weight-light" style="background-color: #28313B">
                 <a class="navbar-brand" href="HomePage.aspx">
                     <img src="Images/Logo_of_MAS_Holdings.png" width="80" height="30" />
                 </a>
-                <%--&nbsp;&nbsp;--%>
-                <%--<a class="navbar-brand" href="#">VOP system</a>--%>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     area-expanded="false" area-label="Toggle navigation" href="HomePage.aspx">
                     <span class="navbar-toggler-icon"></span>
@@ -59,7 +61,51 @@
                     </ul>
                 </div>
             </nav>
-        </div>
+        </div>--%>
+
+
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="HomePage.aspx">ER APPLICATION</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: black;">MAS KREEDA SYNERGY</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="AbsentSummary.aspx" style="color: black;">Absent Summary</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="CarderSummary.aspx" style="color: black;">Carder Summary</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ETOSummary" style="color: black;">ETO-Summary</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ManPower.aspx" style="color: black;">Man-Power</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="EmployeeProfile.aspx" style="color: black;">Employee Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ExcelUploadPage.aspx" style="color: black;">Excel Upload</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="DataEntering.aspx" style="color: black;">Data-Entering</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="LoginPage.aspx" style="color: black;">LogOut</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
         <!--Main Content Placeholder-->
         <div>
