@@ -16,7 +16,50 @@
                 <asp:Button class="btn btn-success" ID="UploadToDB1" Text="Upload to DB1" runat="server" OnClick="UploadExcelToDB1_Click" />
             </div>
             <div class="col">
-                <asp:Button class="btn btn-success" ID="ViewDB1" Text="View Database1" runat="server" OnClick="ViewDB1_Click"/>
+                <asp:Button class="btn btn-danger" ID="DeleteDB1" Text="Delete Today's Uploads" runat="server" OnClick="DeleteDB1_Click" />
+            </div>
+            <div class="col">
+                <asp:Button class="btn btn-success" ID="ViewDB1" Text="View DB1" runat="server" OnClick="ViewDB1_Click" />
+            </div>
+        </div>
+    </div>
+
+
+    <br />
+
+    <div class="container alert alert-primary w3-padsding-top w3-padding-bottom w3-margin-top w3-margin-bottom" style="text-align: center; background-color: #28313B; color: white;">
+        <div class="row align-items-center">
+            <div class="col">
+                <asp:FileUpload ID="FileUpload1" runat="server" />
+            </div>
+            <div class="col">
+                <asp:Button class="btn btn-success" ID="UploadToDB2" Text="Upload to DB2" runat="server" />
+            </div>
+            <div class="col">
+                <asp:Button class="btn btn-danger" ID="DeleteDB2" Text="Delete Today's Uploads" runat="server"/>
+            </div>
+            <div class="col">
+                <asp:Button class="btn btn-success" ID="ViewDB2" Text="View DB2" runat="server"/>
+            </div>
+        </div>
+    </div>
+
+
+    <br />
+
+    <div class="container alert alert-primary w3-padsding-top w3-padding-bottom w3-margin-top w3-margin-bottom" style="text-align: center; background-color: #28313B; color: white;">
+        <div class="row align-items-center">
+            <div class="col">
+                <asp:FileUpload ID="FileUpload2" runat="server" />
+            </div>
+            <div class="col">
+                <asp:Button class="btn btn-success" ID="UploadToDB3" Text="Upload to DB3" runat="server"/>
+            </div>
+            <div class="col">
+                <asp:Button class="btn btn-danger" ID="DeleteDB3" Text="Delete Today's Uploads" runat="server"/>
+            </div>
+            <div class="col">
+                <asp:Button class="btn btn-success" ID="ViewDB3" Text="View DB3" runat="server"/>
             </div>
         </div>
     </div>
