@@ -71,6 +71,7 @@ namespace ER_System_Synergy
             }
         }
 
+        //saveExcelData
         private void SaveExcelData(String d1date, String d1pn, String d1epf, String d1name, String d1gender, String d1joindate, String d1team, String d1classification, String d1shift)
         {
             String query = "INSERT INTO ERDatabase1(d1date, d1pn, d1epf, d1name, d1gender, d1joindate, d1team, d1classification, d1shift ) values('" + d1date + "','" + d1pn + "','" + d1epf + "','" + d1name + "','" + d1gender + "','" + d1joindate + "','" + d1team + "','" + d1classification + "','" + d1shift + "')";
@@ -85,6 +86,24 @@ namespace ER_System_Synergy
         protected void ViewDB1_Click(object sender, EventArgs e)
         {
             Response.Redirect("Database1ViewPage.aspx");
+        }
+
+
+        //Delete today's data
+        protected void DeleteDB1_Click(object sender, EventArgs e)
+        {
+            string currentDate = DateTime.Now.ToString("dd/MM/yyyy");
+            string query = "DELETE FROM ERDatabase1 WHERE  d1date = '" + currentDate + "'";
+            SqlConnection con = new SqlConnection(sqlConnectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = query;
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            //Alert to show that the data has been deleted
+            Response.Write("<script>alert('Data Deleted Successfully');</script>");
         }
     }
 
