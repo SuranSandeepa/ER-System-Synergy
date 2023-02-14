@@ -13,10 +13,10 @@
                 <asp:FileUpload ID="ExcelFileUploadDB1" runat="server" />
             </div>
             <div class="col">
-                <asp:Button class="btn" ID="UploadToDB1" Text="Upload to DB1" runat="server" OnClick="UploadExcelToDB1_Click" />
+                <asp:Button class="btn btn-success" ID="UploadToDB1" Text="Upload to DB1" runat="server" OnClick="UploadExcelToDB1_Click" />
             </div>
             <div class="col">
-                <asp:Button class="btn" ID="ViewDB1" Text="View Database1" runat="server" OnClick="ViewDB1_Click"/>
+                <asp:Button class="btn btn-success" ID="ViewDB1" Text="View Database1" runat="server" OnClick="ViewDB1_Click"/>
             </div>
         </div>
     </div>

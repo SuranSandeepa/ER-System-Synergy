@@ -27,6 +27,7 @@ namespace ER_System_Synergy
             if (ExcelFileUploadDB1.HasFile)
             {
                 String d1date, d1pn, d1epf, d1name, d1gender, d1joindate, d1team, d1classification, d1shift;
+                d1date = DateTime.Now.ToString("dd/MM/yyyy");
 
                 string path = Path.GetFileName(ExcelFileUploadDB1.FileName);
 
@@ -40,15 +41,15 @@ namespace ER_System_Synergy
                 while (dr.Read())
                 {
 
-                    d1date = dr[0].ToString();
-                    d1pn = dr[1].ToString();
-                    d1epf = dr[2].ToString();
-                    d1name = dr[3].ToString();
-                    d1gender = dr[4].ToString();
-                    d1joindate = dr[5].ToString();
-                    d1team = dr[6].ToString();
-                    d1classification = dr[7].ToString();
-                    d1shift = dr[8].ToString();
+                    //d1date = dr[0].ToString();
+                    d1pn = dr[0].ToString();
+                    d1epf = dr[1].ToString();
+                    d1name = dr[2].ToString();
+                    d1gender = dr[3].ToString();
+                    d1joindate = dr[4].ToString();
+                    d1team = dr[5].ToString();
+                    d1classification = dr[6].ToString();
+                    d1shift = dr[7].ToString();
 
                     SaveExcelData(d1date, d1pn, d1epf, d1name, d1gender, d1joindate, d1team, d1classification, d1shift);
 
@@ -65,7 +66,7 @@ namespace ER_System_Synergy
             else
             {
                 // Alert to show that no file has been selected
-                Response.Write("<script>alert('Please select a file');</script>");
+                Response.Write("<script>alert('Please select a file!');</script>");
 
             }
         }

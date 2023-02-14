@@ -71,6 +71,7 @@
     <Content Include="Bootstrap\JS\bootstrap.min.js" />
     <Content Include="Bootstrap\JS\jquery-3.2.1.slim.min.js" />
     <Content Include="Bootstrap\JS\popper.min.js" />
+    <Content Include="CSS\Main.css" />
     <Content Include="Database1ViewPage.aspx" />
     <Content Include="ExcelUploadPage.aspx" />
     <Content Include="FeedbackPage.aspx" />
