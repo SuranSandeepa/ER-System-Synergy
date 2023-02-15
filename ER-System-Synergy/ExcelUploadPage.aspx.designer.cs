@@ -51,13 +51,13 @@ namespace ER_System_Synergy
         protected global::System.Web.UI.WebControls.Button ViewDB1;
 
         /// <summary>
-        /// FileUpload1 control.
+        /// ExcelFileUploadDB2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload ExcelFileUploadDB2;
 
         /// <summary>
         /// UploadToDB2 control.
@@ -87,13 +87,13 @@ namespace ER_System_Synergy
         protected global::System.Web.UI.WebControls.Button ViewDB2;
 
         /// <summary>
-        /// FileUpload2 control.
+        /// ExcelFileUploadDB3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload2;
+        protected global::System.Web.UI.WebControls.FileUpload ExcelFileUploadDB3;
 
         /// <summary>
         /// UploadToDB3 control.
