@@ -73,7 +73,7 @@ namespace ER_System_Synergy
         }
 
         //saveExcelData DB1
-        private void SaveExcelData(String d1date, String d1pn, String d1epf, String d1name, String d1gender, String d1joindate, String d1team, String d1classification, String d1shift)
+        private void SaveExcelData(string d1date, string d1pn, string d1epf, string d1name, string d1gender, string d1joindate, string d1team, string d1classification, string d1shift)
         {
             String query = "INSERT INTO ERDatabase1(d1date, d1pn, d1epf, d1name, d1gender, d1joindate, d1team, d1classification, d1shift ) values('" + d1date + "','" + d1pn + "','" + d1epf + "','" + d1name + "','" + d1gender + "','" + d1joindate + "','" + d1team + "','" + d1classification + "','" + d1shift + "')";
             SqlConnection con = new SqlConnection(sqlConnectionString);
@@ -151,7 +151,7 @@ namespace ER_System_Synergy
         }
 
         //saveExcelData DB2
-        private void SaveExcelDataDB2(String d2date, String d2pn, String d2status)
+        private void SaveExcelDataDB2(string d2date, string d2pn, string d2status)
         {
             string query = "INSERT INTO ERDatabase2 (d2date, d2pn, d2status) VALUES (@d2date, @d2pn, @d2status)";
             using (SqlConnection con = new SqlConnection(sqlConnectionString))
@@ -189,68 +189,77 @@ namespace ER_System_Synergy
 
 
 
-        //Excel Upload DB3------------------------------------------
+        // Excel Upload DB3 ------------------------------------------
         protected void UploadToDB3_Click(object sender, EventArgs e)
         {
-            if (ExcelFileUploadDB2.HasFile)
+            if (ExcelFileUploadDB3.HasFile)
             {
-                String d2date, d2pn, d2status;
-                d2date = DateTime.Now.ToString("dd/MM/yyyy");
-
-                string path = Path.GetFileName(ExcelFileUploadDB2.FileName);
-
+                string d3date = DateTime.Now.ToString("dd/MM/yyyy");
+                string path = Path.GetFileName(ExcelFileUploadDB3.FileName);
                 path = path.Replace(" ", "");
-                ExcelFileUploadDB2.SaveAs(Server.MapPath("~/ExcelUpload/") + path);
-                String ExcelPath = Server.MapPath("~/ExcelUpload/") + path;
-                OleDbConnection mycon = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + ExcelPath + "; Extended Properties=Excel 8.0; Persist Security Info = False");
-                mycon.Open();
-                OleDbCommand cmd = new OleDbCommand("select * from [Sheet1$]", mycon);
-                OleDbDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+
+                ExcelFileUploadDB3.SaveAs(Server.MapPath("~/ExcelUpload/") + path);
+                string excelPath = Server.MapPath("~/ExcelUpload/") + path;
+
+                using (OleDbConnection connection = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + excelPath + "; Extended Properties=Excel 8.0; Persist Security Info=False"))
                 {
-                    d2pn = dr[0].ToString();
-                    d2status = dr[1].ToString();
+                    connection.Open();
+                    using (OleDbCommand command = new OleDbCommand("SELECT * FROM [Sheet1$]", connection))
+                    using (OleDbDataReader dataReader = command.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            string d3team = dataReader[0].ToString();
+                            string d3shift = dataReader[1].ToString();
+                            string d3vsl = dataReader[2].ToString();
+                            string d3er = dataReader[3].ToString();
+                            string d3gl = dataReader[4].ToString();
+                            string d3budget = dataReader[5].ToString();
+                            string d3actual = dataReader[6].ToString();
 
-                    SaveExcelDataDB3(d2date, d2pn, d2status);
+                            SaveExcelDataDB3(d3date, d3team, d3shift, d3vsl, d3er, d3gl, d3budget, d3actual);
+                        }
+                    }
 
+                    // Alert
+                    ClientScript.RegisterStartupScript(this.GetType(), "DataSaved", "alert('Data Saved Successfully');", true);
+                    connection.Close();
                 }
 
-                //Alert
-                Response.Write("<script>alert('Data Saved Successfully');</script>");
-
-                mycon.Close();
-
-                File.Delete(ExcelPath);
-
+                File.Delete(excelPath);
             }
             else
             {
                 // Alert to show that no file has been selected
-                Response.Write("<script>alert('Please select a file!');</script>");
-
+                ClientScript.RegisterStartupScript(this.GetType(), "NoFileSelected", "alert('Please select a file!');", true);
             }
         }
 
-        //saveExcelData DB2
-        private void SaveExcelDataDB3(String d2date, String d2pn, String d2status)
+        // SaveExcelData DB3
+        private void SaveExcelDataDB3(string d3date, string d3team, string d3shift, string d3vsl, string d3er, string d3gl, string d3budget, string d3actual)
         {
-            string query = "INSERT INTO ERDatabase3 (d2date, d2pn, d2status) VALUES (@d2date, @d2pn, @d2status)";
-            using (SqlConnection con = new SqlConnection(sqlConnectionString))
-            using (SqlCommand cmd = new SqlCommand(query, con))
+            string query = "INSERT INTO ERDatabase3 (d3date, d3team, d3shift, d3vsl, d3er, d3gl, d3budget, d3actual) VALUES (@d3date, @d3team, @d3shift, @d3vsl, @d3er, @d3gl, @d3budget, @d3actual)";
+            using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
             {
-                cmd.Parameters.AddWithValue("@d2date", d2date);
-                cmd.Parameters.AddWithValue("@d2pn", d2pn);
-                cmd.Parameters.AddWithValue("@d2status", d2status);
-                con.Open();
-                cmd.ExecuteNonQuery();
+                command.Parameters.AddWithValue("@d3date", d3date);
+                command.Parameters.AddWithValue("@d3team", d3team);
+                command.Parameters.AddWithValue("@d3shift", d3shift);
+                command.Parameters.AddWithValue("@d3vsl", d3vsl);
+                command.Parameters.AddWithValue("@d3er", d3er);
+                command.Parameters.AddWithValue("@d3gl", d3gl);
+                command.Parameters.AddWithValue("@d3budget", d3budget);
+                command.Parameters.AddWithValue("@d3actual", d3actual);
+                connection.Open();
+                command.ExecuteNonQuery();
             }
         }
 
-        //Delete today's data DB2
+        //Delete today's data DB3
         protected void DeleteDB3_Click(object sender, EventArgs e)
         {
             string currentDate = DateTime.Now.ToString("dd/MM/yyyy");
-            string query = "DELETE FROM ERDatabase3 WHERE d2date = '" + currentDate + "'";
+            string query = "DELETE FROM ERDatabase3 WHERE d3date = '" + currentDate + "'";
             SqlConnection con = new SqlConnection(sqlConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand();

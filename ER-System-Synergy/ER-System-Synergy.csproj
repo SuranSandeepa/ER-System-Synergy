@@ -73,6 +73,8 @@
     <Content Include="Bootstrap\JS\popper.min.js" />
     <Content Include="CSS\Main.css" />
     <Content Include="Database1ViewPage.aspx" />
+    <Content Include="Database2ViewPage.aspx" />
+    <Content Include="Database3ViewPage.aspx" />
     <Content Include="ExcelUploadPage.aspx" />
     <Content Include="FeedbackPage.aspx" />
     <Content Include="FeedbackViewPage.aspx" />
@@ -100,6 +102,20 @@
     </Compile>
     <Compile Include="Database1ViewPage.aspx.designer.cs">
       <DependentUpon>Database1ViewPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database2ViewPage.aspx.cs">
+      <DependentUpon>Database2ViewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database2ViewPage.aspx.designer.cs">
+      <DependentUpon>Database2ViewPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database3ViewPage.aspx.cs">
+      <DependentUpon>Database3ViewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database3ViewPage.aspx.designer.cs">
+      <DependentUpon>Database3ViewPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
     <Compile Include="ExcelUploadPage.aspx.cs">
