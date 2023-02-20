@@ -15,4 +15,34 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
+
+    <div>
+        <%--dropdown--%>
+        <div>
+            <div class="container alert alert-primary w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom" style="background-color: #28313B; color: white;">
+                <table class="auto-style1">
+                    <tr>
+                        <td class="auto-style2">
+                            <asp:DropDownList ID="dwRC" CssClass="btn btn-primary dropdown-toggle" runat="server">
+                                <asp:ListItem>Absent - Informed</asp:ListItem>
+                                <asp:ListItem>Absent - Not Informed</asp:ListItem>
+                                <asp:ListItem>Leave - Applied</asp:ListItem>
+                                <asp:ListItem>Leave - Not Applied</asp:ListItem>
+                                <asp:ListItem>Maternity Leave Over</asp:ListItem>
+                                <asp:ListItem>Maternity Leave Start</asp:ListItem>
+                                <asp:ListItem>Late Resign</asp:ListItem>
+                                <asp:ListItem>1Month Resign</asp:ListItem>
+                                <asp:ListItem>VOP</asp:ListItem>
+                            </asp:DropDownList>
+
+                        </td>
+                        <td>
+                            <asp:Button ID="btnSearchRC" class="btn btn-success" runat="server" Text="Search" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 </asp:Content>
