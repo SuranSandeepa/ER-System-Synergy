@@ -96,7 +96,7 @@
                                 <a class="nav-link" href="ExcelUploadPage.aspx" style="color: black;">Excel Upload</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="DataEntering.aspx" style="color: black;">Data-Entering</a>
+                                <a class="nav-link" href="DataEnteringPage.aspx" style="color: black;">Data-Entering</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="LoginPage.aspx" style="color: black;">LogOut</a>
