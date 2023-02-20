@@ -75,6 +75,7 @@
     <Content Include="Database1ViewPage.aspx" />
     <Content Include="Database2ViewPage.aspx" />
     <Content Include="Database3ViewPage.aspx" />
+    <Content Include="DataEnteringPage.aspx" />
     <Content Include="ExcelUploadPage.aspx" />
     <Content Include="FeedbackPage.aspx" />
     <Content Include="FeedbackViewPage.aspx" />
@@ -116,6 +117,13 @@
     </Compile>
     <Compile Include="Database3ViewPage.aspx.designer.cs">
       <DependentUpon>Database3ViewPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataEnteringPage.aspx.cs">
+      <DependentUpon>DataEnteringPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataEnteringPage.aspx.designer.cs">
+      <DependentUpon>DataEnteringPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
     <Compile Include="ExcelUploadPage.aspx.cs">
