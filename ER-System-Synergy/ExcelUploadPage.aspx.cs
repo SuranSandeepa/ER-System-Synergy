@@ -27,7 +27,7 @@ namespace ER_System_Synergy
         {
             if (ExcelFileUploadDB1.HasFile)
             {
-                String d1date, d1pn, d1epf, d1name, d1gender, d1joindate, d1team, d1classification, d1shift;
+                String d1date, d1pn, d1epf, d1name, d1gender, d1joindate, d1team, d1classification, d1shift, d1factory, d1gl, d1er, d1vsl, d1job;
                 d1date = DateTime.Now.ToString("dd/MM/yyyy");
 
                 string path = Path.GetFileName(ExcelFileUploadDB1.FileName);
@@ -51,8 +51,13 @@ namespace ER_System_Synergy
                     d1team = dr[5].ToString();
                     d1classification = dr[6].ToString();
                     d1shift = dr[7].ToString();
+                    d1factory = dr[8].ToString();
+                    d1gl = dr[9].ToString();
+                    d1er = dr[10].ToString();
+                    d1vsl = dr[11].ToString();
+                    d1job = dr[12].ToString();
 
-                    SaveExcelData(d1date, d1pn, d1epf, d1name, d1gender, d1joindate, d1team, d1classification, d1shift);
+                    SaveExcelData(d1date, d1pn, d1epf, d1name, d1gender, d1joindate, d1team, d1classification, d1shift, d1factory, d1gl, d1er, d1vsl, d1job);
 
                 }
 
@@ -73,9 +78,9 @@ namespace ER_System_Synergy
         }
 
         //saveExcelData DB1
-        private void SaveExcelData(string d1date, string d1pn, string d1epf, string d1name, string d1gender, string d1joindate, string d1team, string d1classification, string d1shift)
+        private void SaveExcelData(string d1date, string d1pn, string d1epf, string d1name, string d1gender, string d1joindate, string d1team, string d1classification, string d1shift, string d1factory, string d1gl, string d1er, string d1vsl, string d1job)
         {
-            String query = "INSERT INTO ERDatabase1(d1date, d1pn, d1epf, d1name, d1gender, d1joindate, d1team, d1classification, d1shift ) values('" + d1date + "','" + d1pn + "','" + d1epf + "','" + d1name + "','" + d1gender + "','" + d1joindate + "','" + d1team + "','" + d1classification + "','" + d1shift + "')";
+            String query = "INSERT INTO ERDatabase1(d1date, d1pn, d1epf, d1name, d1gender, d1joindate, d1team, d1classification, d1shift, d1factory, d1gl, d1er, d1vsl, d1job ) values('" + d1date + "','" + d1pn + "','" + d1epf + "','" + d1name + "','" + d1gender + "','" + d1joindate + "','" + d1team + "','" + d1classification + "','" + d1shift + "','" + d1factory + "','" + d1gl + "','" + d1er + "','" + d1vsl + "','" + d1job + "')";
             SqlConnection con = new SqlConnection(sqlConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand();
