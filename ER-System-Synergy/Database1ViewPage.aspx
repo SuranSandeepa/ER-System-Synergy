@@ -74,6 +74,41 @@
 
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
+                    <asp:BoundField DataField="d1factory" HeaderText="Factory">
+                        <FooterStyle Width="10%"></FooterStyle>
+
+                        <HeaderStyle Width="10%"></HeaderStyle>
+
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="d1gl" HeaderText="GL">
+                        <FooterStyle Width="10%"></FooterStyle>
+
+                        <HeaderStyle Width="10%"></HeaderStyle>
+
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="d1er" HeaderText="ER">
+                        <FooterStyle Width="10%"></FooterStyle>
+
+                        <HeaderStyle Width="10%"></HeaderStyle>
+
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="d1vsl" HeaderText="VSL">
+                        <FooterStyle Width="10%"></FooterStyle>
+
+                        <HeaderStyle Width="10%"></HeaderStyle>
+
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="d1job" HeaderText="JOB">
+                        <FooterStyle Width="10%"></FooterStyle>
+
+                        <HeaderStyle Width="10%"></HeaderStyle>
+
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
                 </Columns>
                 <HeaderStyle BackColor="#333333" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#003366" BorderStyle="Groove" />
             </asp:GridView>
