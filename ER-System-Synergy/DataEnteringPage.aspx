@@ -25,15 +25,18 @@
                     <tr>
                         <td class="auto-style2">
                             <asp:DropDownList ID="dwRC" CssClass="btn btn-primary dropdown-toggle" runat="server">
-                                <asp:ListItem>Absent - Informed</asp:ListItem>
-                                <asp:ListItem>Absent - Not Informed</asp:ListItem>
-                                <asp:ListItem>Leave - Applied</asp:ListItem>
-                                <asp:ListItem>Leave - Not Applied</asp:ListItem>
-                                <asp:ListItem>Maternity Leave Over</asp:ListItem>
-                                <asp:ListItem>Maternity Leave Start</asp:ListItem>
-                                <asp:ListItem>Late Resign</asp:ListItem>
-                                <asp:ListItem>1Month Resign</asp:ListItem>
-                                <asp:ListItem>VOP</asp:ListItem>
+                                <asp:ListItem>Factory 01 Shift A</asp:ListItem>
+                                <asp:ListItem>Factory 01 Shift B</asp:ListItem>
+                                <asp:ListItem>Factory 02 Shift A</asp:ListItem>
+                                <asp:ListItem>Factory 02 Shift B</asp:ListItem>
+                                <asp:ListItem>SOB Area A</asp:ListItem>
+                                <asp:ListItem>SOB Area B</asp:ListItem>
+                                <asp:ListItem>SOB Area B</asp:ListItem>
+                                <asp:ListItem>Pre Sewing A</asp:ListItem>
+                                <asp:ListItem>Pre Sewing B</asp:ListItem>
+                                <asp:ListItem>Pre Sewing C</asp:ListItem>
+                                <asp:ListItem>Other Department A</asp:ListItem>
+                                <asp:ListItem>Other Department B</asp:ListItem>
                             </asp:DropDownList>
 
                         </td>
