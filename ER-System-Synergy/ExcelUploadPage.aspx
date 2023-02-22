@@ -45,25 +45,6 @@
     </div>
 
 
-    <br />
-
-    <div class="container alert alert-primary w3-padsding-top w3-padding-bottom w3-margin-top w3-margin-bottom" style="text-align: center; background-color: #28313B; color: white;">
-        <div class="row align-items-center">
-            <div class="col">
-                <asp:FileUpload ID="ExcelFileUploadDB3" runat="server" />
-            </div>
-            <div class="col">
-                <asp:Button class="btn btn-success" ID="UploadToDB3" Text="Upload to DB3" OnClick="UploadToDB3_Click" runat="server" />
-            </div>
-            <div class="col">
-                <asp:Button class="btn btn-danger" ID="DeleteDB3" Text="Delete Today's Uploads" OnClick="DeleteDB3_Click" runat="server" />
-            </div>
-            <div class="col">
-                <asp:Button class="btn btn-success" ID="ViewDB3" Text="View DB3" OnClick="ViewDB3_Click" runat="server" />
-            </div>
-        </div>
-    </div>
-
 
 
     <%--    <section>
