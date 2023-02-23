@@ -44,37 +44,4 @@
         </div>
     </div>
 
-
-
-
-    <%--    <section>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Database 01
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Database 01 Excel Upload</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="col">
-                            <asp:FileUpload ID="ExcelFileUploadDB1" runat="server" />
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <asp:Button ID="UploadToDB1" runat="server" OnClick="UploadExcelToDB1_Click" Text="Upload" CssClass="btn btn-primary" data-dismiss="modal" />
-                        <asp:Button ID="ViewDB1" runat="server" OnClick="ViewDB1_Click" Text="View DB1" CssClass="btn btn-success" data-dismiss="modal" />
-                        <asp:Button ID="DeleteDB1" runat="server" OnClick="DeleteDB1_Click" Text="Delete" CssClass="btn btn-danger" data-dismiss="modal" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>--%>
 </asp:Content>
