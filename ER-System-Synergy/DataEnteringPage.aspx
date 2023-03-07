@@ -18,34 +18,18 @@
     <br />
 
     <div>
-        <%--dropdown--%>
-        <div>
-            <div class="container alert alert-primary w3-padding-top w3-padding-bottom w3-margin-top w3-margin-bottom" style="background-color: #28313B; color: white;">
-                <table class="auto-style1">
-                    <tr>
-                        <td class="auto-style2">
-                            <asp:DropDownList ID="dwRC" CssClass="btn btn-primary dropdown-toggle" runat="server">
-                                <asp:ListItem>Factory 01 Shift A</asp:ListItem>
-                                <asp:ListItem>Factory 01 Shift B</asp:ListItem>
-                                <asp:ListItem>Factory 02 Shift A</asp:ListItem>
-                                <asp:ListItem>Factory 02 Shift B</asp:ListItem>
-                                <asp:ListItem>SOB Area A</asp:ListItem>
-                                <asp:ListItem>SOB Area B</asp:ListItem>
-                                <asp:ListItem>SOB Area B</asp:ListItem>
-                                <asp:ListItem>Pre Sewing A</asp:ListItem>
-                                <asp:ListItem>Pre Sewing B</asp:ListItem>
-                                <asp:ListItem>Pre Sewing C</asp:ListItem>
-                                <asp:ListItem>Other Department A</asp:ListItem>
-                                <asp:ListItem>Other Department B</asp:ListItem>
-                            </asp:DropDownList>
 
-                        </td>
-                        <td>
-                            <asp:Button ID="btnSearchRC" class="btn btn-success" runat="server" Text="Search" />
-                        </td>
-                    </tr>
-                </table>
-            </div>
+            <section>
+        <div class="container">
+            <asp:GridView ID="GridView1" CssClass="table table-bordered table-hover table-responsive" runat="server" AutoGenerateColumns="false" EmptyDataText="No Record Found" PageSize="30" HorizontalAlign="Center" BackColor="Silver" BorderColor="#003366" Font-Bold="True" Font-Names="Calibri">
+                <Columns>
+                    <asp:BoundField DataField="d1epf" HeaderText="EPF" />
+                    <asp:BoundField DataField="d1name" HeaderText="Name" />
+                    <asp:BoundField DataField="d1team" HeaderText="Team" />
+                </Columns>
+                <HeaderStyle BackColor="#333333" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" BorderColor="#003366" BorderStyle="Groove" />
+            </asp:GridView>
         </div>
+    </section>
     </div>
 </asp:Content>
