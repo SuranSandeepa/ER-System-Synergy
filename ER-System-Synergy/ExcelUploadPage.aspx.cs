@@ -110,6 +110,9 @@ namespace ER_System_Synergy
 
             //Alert to show that the data has been deleted
             Response.Write("<script>alert('Data Deleted Successfully');</script>");
+
+            // Redirect to the same page to prevent the data from being uploaded again when the page is reloaded
+            Response.Redirect(Request.RawUrl);
         }
 
 
@@ -145,6 +148,8 @@ namespace ER_System_Synergy
                 mycon.Close();
 
                 File.Delete(ExcelPath);
+
+
 
             }
             else
